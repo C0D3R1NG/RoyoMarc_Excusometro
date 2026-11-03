@@ -1,64 +1,115 @@
+/* ===== Colores ===== */
+:root {
+    --oscuro: #171717;
+    --claro: #f2f0e8;
+    --hielo: #3ffff5;
+    --azul: #11aff8;
+    --blanco: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #f2f0e8;
-    color: #171717;
+    background-color: var(--claro);
+    color: var(--oscuro);
     font-size: 16px;
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== Cabecera ===== */
 header {
-    background-color: #171717;
-    color: #f2f0e8;
+    background: linear-gradient(160deg, #171717 0%, #0d2a3a 100%);
+    color: var(--claro);
     text-align: center;
-    padding: 60px 30px;
+    padding: 70px 30px;
 }
 
 header p {
-    color: #3ffff5;
-    font-size: 1rem;
-    font-weight: 700;
     margin: 10px 0;
+}
+
+header .etiqueta {
+    color: var(--hielo);
+    font-weight: 700;
+    letter-spacing: 3px;
 }
 
 h1 {
-    color: #ffffff;
-    font-size: 4rem;
+    color: var(--blanco);
+    font-size: clamp(2.4rem, 7vw, 4rem);
     font-weight: 700;
     margin: 10px 0;
+    letter-spacing: 2px;
 }
 
-nav{
-    background-color: #3fffec;
+/* ===== Botón ===== */
+.boton {
+    display: inline-block;
+    background-color: var(--hielo);
+    color: var(--oscuro);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* ===== Menú ===== */
+nav {
+    background-color: var(--hielo);
     text-align: center;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-nav a{
-    color: #171717;
+nav a {
+    color: var(--oscuro);
     font-weight: 700;
     text-decoration: none;
     margin: 0 12px;
+    display: inline-block;
 }
 
-nav a:hover{
-    color: rgb(79, 32, 247)
+nav a:hover {
+    color: rgb(79, 32, 247);
 }
 
+/* ===== Contenido ===== */
 main {
-    max-width: 900px;
+    max-width: 960px;
     margin: auto;
-    padding: 40px 30px;
+    padding: 40px 20px;
 }
 
 section {
-    background-color: #ffffff;
+    background-color: var(--blanco);
     margin-bottom: 24px;
     padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    scroll-margin-top: 70px;
 }
 
 h2 {
-    color: #171717;
+    color: var(--oscuro);
     font-size: 1.8rem;
     font-weight: 700;
     margin-top: 0;
@@ -68,50 +119,182 @@ p {
     margin-bottom: 16px;
 }
 
-ul {
-    line-height: 1.9;
-}
-
-ol {
-    line-height: 1.9;
-}
-
 li {
     margin-bottom: 8px;
 }
-.excusa{
+
+.centrado {
+    text-align: center;
+}
+
+/* Intro con foto al lado */
+.intro {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.intro img {
+    width: 260px;
+    border-radius: 12px;
+}
+
+/* ===== Tarjetas de clases ===== */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.excusa {
     background-color: #f4f4f4;
     padding: 20px;
-    margin-bottom: 16px;
+    border-radius: 10px;
+    border-left: 5px solid var(--azul);
+    transition: transform 0.2s;
 }
 
-.excusa h3{
-    color: #11aff8;
+.excusa:hover {
+    transform: translateY(-4px);
+}
+
+.excusa h3 {
+    color: var(--azul);
     margin-top: 0;
 }
-#estado{
-    background-color: #171717;
+
+.excusa p {
+    margin-bottom: 0;
+}
+
+/* ===== Pasos del entrenamiento ===== */
+.pasos {
+    list-style: none;
+    counter-reset: paso;
+    padding: 0;
+}
+
+.pasos li {
+    counter-increment: paso;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.pasos li::before {
+    content: counter(paso);
+    background-color: var(--oscuro);
+    color: var(--hielo);
+    font-weight: 700;
+    min-width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Estado ===== */
+#estado {
+    background-color: var(--oscuro);
     color: ghostwhite;
 }
 
-#estado h2{
+#estado h2 {
     color: ghostwhite;
 }
 
+.operativo {
+    color: #4ade80;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+/* ===== Página del club ===== */
+.niveles {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.niveles li {
+    background-color: var(--oscuro);
+    color: var(--hielo);
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 30px;
+    margin: 0;
+}
+
+.HockeyHielo {
+    background-color: #3fb4e6;
+}
+
+.HockeyHielo h2 {
+    color: var(--blanco);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.galeria figure {
+    margin: 0;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.galeria img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.galeria figcaption {
+    padding: 10px 14px;
+    font-weight: 700;
+}
+
+/* ===== Pie ===== */
 footer {
-    background-color: #3ffcff;
-    color: #171717;
+    background-color: var(--hielo);
+    color: var(--oscuro);
     text-align: center;
     padding: 24px;
 }
 
 footer p {
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 6px;
 }
-body > img {
-    display: block;
-    width: 400px;
-    max-width: 100%;
-    margin: 20px auto;
+
+footer a {
+    color: var(--oscuro);
+}
+
+/* ===== Móvil ===== */
+@media (max-width: 700px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro img {
+        width: 100%;
+    }
+
+    .tarjetas,
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 22px;
+    }
 }

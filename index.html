@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,15 +8,16 @@
     <meta name="keywords" content="hockey, clases, patinaje, entrenamiento, jugadores">
     <title>Clases de Hockey</title>
     <link rel="stylesheet" href="estilos.css">
-    <link rel="shortcut icon" href="img/robot-solid-full.svg" type="image/x-icon">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏒</text></svg>">
 </head>
 
 <body>
 
     <header>
-        <p>ACADEMIA DE ENTRENAMIENTO DE HOCKEY</p>
+        <p class="etiqueta">ACADEMIA DE ENTRENAMIENTO DE HOCKEY</p>
         <h1>HOCKEY HIELO</h1>
         <p>Vive la experiencia de ser el mejor en un deporte.</p>
+        <a class="boton" href="#archivo">Ver las clases</a>
     </header>
 
     <nav>
@@ -25,57 +25,58 @@
         <a href="#archivo">Clases</a>
         <a href="#protocolo">Entrenamientos</a>
         <a href="#estado">Estado</a>
+        <a href="paginas/expediente.html">El club</a>
     </nav>
 
     <main>
 
-        <section>
-            <h2 id="que-hacemos">¿Qué hacemos aquí?</h2>
+        <section id="que-hacemos" class="intro">
+            <div>
+                <h2>¿Qué hacemos aquí?</h2>
 
-            <p>
-                Ofrecemos clases de hockey para mejorar el patinaje, el control del stick,
-                los pases y los lanzamientos a portería.
-            </p>
+                <p>
+                    Ofrecemos clases de hockey para mejorar el patinaje, el control del stick,
+                    los pases y los lanzamientos a portería.
+                </p>
 
-            <p>
-                Nuestro objetivo es ayudarte a desarrollar tus habilidades, ganar confianza
-                sobre el hielo y aprender a jugar en equipo.
-            </p>
+                <p>
+                    Nuestro objetivo es ayudarte a desarrollar tus habilidades, ganar confianza
+                    sobre el hielo y aprender a jugar en equipo.
+                </p>
+            </div>
+            <img src="img/hockeyy.png" alt="Jugador de hockey con el stick en la pista">
         </section>
 
-        <section>
-            <h2 id="archivo">Nuestras clases de hockey</h2>
+        <section id="archivo">
+            <h2>Nuestras clases de hockey</h2>
 
             <p>
                 En nuestros entrenamientos trabajamos las habilidades más importantes
                 para mejorar como jugador:
             </p>
 
-            <article class="excusa">
-                <h3>Patinaje sobre hielo</h3>
-                <p>Mejora tu equilibrio, velocidad y giros, se mas hábil</p>
-            </article>
-            <article class="excusa">
-                <h3>Control del stick handling</h3>
-                <p>Aprende a controlar el disco mientras te desplazas por el hielo.</p>
-                <a href="paginas/expediente.html" target="_blank"/a>
-            </article>
-             <article class="excusa">
-                <h3>Pases y lanzamientos</h3>
-                <p>Practica la precisión de tus pases y mejora tus tiros a portería.</p>
-            </article>
-             <article class="excusa">
-                <h3>Táctica y juego en equipo</h3>
-                <p>Aprende a posicionarte, tomar decisiones y colaborar con tus compañeros.</p>
-            </article>
+            <div class="tarjetas">
+                <article class="excusa">
+                    <h3>Patinaje sobre hielo</h3>
+                    <p>Mejora tu equilibrio, velocidad y giros para ser más hábil.</p>
+                </article>
+                <article class="excusa">
+                    <h3>Control del stick</h3>
+                    <p>Aprende a controlar el disco mientras te desplazas por el hielo.</p>
+                </article>
+                <article class="excusa">
+                    <h3>Pases y lanzamientos</h3>
+                    <p>Practica la precisión de tus pases y mejora tus tiros a portería.</p>
+                </article>
+                <article class="excusa">
+                    <h3>Táctica y juego en equipo</h3>
+                    <p>Aprende a posicionarte, tomar decisiones y colaborar con tus compañeros.</p>
+                </article>
+            </div>
 
-            <!-- <ul>
-                <li>Patinaje sobre hielo.</li>
-                <li>Control del stick y del puck.</li>
-                <li>Pases y lanzamientos.</li>
-                <li>Táctica y juego en equipo.</li>
-                <li>Preparación física para el hockey.</li>
-            </ul> -->
+            <p class="centrado">
+                <a class="boton" href="paginas/expediente.html">Conoce el club y sus niveles</a>
+            </p>
         </section>
 
         <section id="protocolo">
@@ -86,7 +87,7 @@
                 y mejorar progresivamente:
             </p>
 
-            <ol>
+            <ol class="pasos">
                 <li>Calentar y preparar el cuerpo para el entrenamiento.</li>
                 <li>Practicar el patinaje y los desplazamientos.</li>
                 <li>Trabajar el control del stick y del puck.</li>
@@ -98,9 +99,8 @@
         <section id="estado">
             <h2>Estado actual de las clases</h2>
 
-            <p>
-                OPERATIVO - Preparados para mejorar tus habilidades sobre el hielo.
-            </p>
+            <p class="operativo">● OPERATIVO</p>
+            <p>Preparados para mejorar tus habilidades sobre el hielo.</p>
 
             <p>
                 Objetivo de cada entrenamiento: aprender, progresar y disfrutar del hockey.
@@ -113,8 +113,7 @@
         <p>Hockey - Pasión, esfuerzo y trabajo en equipo desde 2026 - Marc Royo.</p>
         <a href="https://github.com/C0D3R1NG/RoyoMarc_Excusometro/tree/desarrollo" target="_blank">Código fuente GitHub</a>
     </footer>
-<img src="img/hockeyy.png" alt="Clases de hockey">
+
 </body>
 
 </html>
-```
