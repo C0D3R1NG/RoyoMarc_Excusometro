@@ -1,4 +1,4 @@
-/* ===== Colores ===== */
+
 :root {
     --oscuro: #171717;
     --claro: #f2f0e8;
@@ -25,7 +25,7 @@ img {
     display: block;
 }
 
-/* ===== Cabecera ===== */
+
 header {
     background: linear-gradient(160deg, #171717 0%, #0d2a3a 100%);
     color: var(--claro);
@@ -51,7 +51,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* ===== Botón ===== */
+
 .boton {
     display: inline-block;
     background-color: var(--hielo);
@@ -69,7 +69,7 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* ===== Menú ===== */
+
 nav {
     background-color: var(--hielo);
     text-align: center;
@@ -92,7 +92,7 @@ nav a:hover {
     color: rgb(79, 32, 247);
 }
 
-/* ===== Contenido ===== */
+
 main {
     max-width: 960px;
     margin: auto;
@@ -127,7 +127,7 @@ li {
     text-align: center;
 }
 
-/* Intro con foto al lado */
+
 .intro {
     display: flex;
     gap: 30px;
@@ -139,7 +139,6 @@ li {
     border-radius: 12px;
 }
 
-/* ===== Tarjetas de clases ===== */
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -167,7 +166,7 @@ li {
     margin-bottom: 0;
 }
 
-/* ===== Pasos del entrenamiento ===== */
+
 .pasos {
     list-style: none;
     counter-reset: paso;
@@ -195,7 +194,7 @@ li {
     justify-content: center;
 }
 
-/* ===== Estado ===== */
+
 #estado {
     background-color: var(--oscuro);
     color: ghostwhite;
@@ -212,7 +211,7 @@ li {
     margin-bottom: 4px;
 }
 
-/* ===== Página del club ===== */
+
 .niveles {
     list-style: none;
     padding: 0;
@@ -262,7 +261,7 @@ li {
     font-weight: 700;
 }
 
-/* ===== Pie ===== */
+
 footer {
     background-color: var(--hielo);
     color: var(--oscuro);
@@ -279,22 +278,19 @@ footer a {
     color: var(--oscuro);
 }
 
-/* ===== Móvil ===== */
-@media (max-width: 700px) {
-    .intro {
-        flex-direction: column;
-    }
 
-    .intro img {
-        width: 100%;
-    }
-
-    .tarjetas,
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 22px;
-    }
+/* Rectángulo fijo HCB - BARCELONA */
+.fijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    border: 2px solid skyblue;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+}
+.contenedor{
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    position: relative;
+    top: -50px;
+}
+.caja{
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+    position: absolute;
+    top: 50px;
+}
+
+.caja2{
+    width: 150px;
+    height: 150px;
+    background-color: antiquewhite;
+    position: relative;
+    top: 300px;
+}
+.naranja{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(51, 21, 206);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
